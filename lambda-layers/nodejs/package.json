@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@remotion/lambda": "^4.0.110",
+    "dotenv": "^16.4.4"
+  }
+}
