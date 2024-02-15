@@ -1,0 +1,453 @@
+[
+  {
+    "expression": "Computer=Office.",
+    "props": {
+      "duration": 2.569,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Computer",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": "Office",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " CPU = office workers.",
+    "props": {
+      "duration": 5.595,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " CPU ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " office workers",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Workers \u201ccarry out\u201d instructions.",
+    "props": {
+      "duration": 4.326,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Workers ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " instructions",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "carry out"
+      }
+    }
+  },
+  {
+    "expression": "Cpu \u201cprocesses\u201d information.",
+    "props": {
+      "duration": 7.955,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Cpu ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " information",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "processes"
+      }
+    }
+  },
+  {
+    "expression": " Memory (RAM) = Worker\u2019s desk space.",
+    "props": {
+      "duration": 5.519,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Memory (RAM) ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " Worker\u2019s desk space",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " CPU \u201cplaces\u201d data.",
+    "props": {
+      "duration": 4.628,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " CPU ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " data",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "places"
+      }
+    }
+  },
+  {
+    "expression": " Space \u201callows\u201d task handling.",
+    "props": {
+      "duration": 4.174,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Space ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " task handling",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "allows"
+      }
+    }
+  },
+  {
+    "expression": " Storage = filing cabinets.",
+    "props": {
+      "duration": 6.14,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Storage ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " filing cabinets",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Storage 'stores' data.",
+    "props": {
+      "duration": 4.697,
+      "format": {
+        "operation": "asset",
+        "expression": " Storage 'stores' data",
+        "assetUrl": "https://video.pexels.com"
+      }
+    }
+  },
+  {
+    "expression": " Input devices= \u201dworkers\u201d receiving instructions.",
+    "props": {
+      "duration": 7.209,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Input devices",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " \u201dworkers\u201d receiving instructions",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Output devices = workers results board.",
+    "props": {
+      "duration": 5.318,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Output devices ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " workers results board",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Operating System = Office Manager.",
+    "props": {
+      "duration": 3.677,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Operating System ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " Office Manager",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Project manager \u201ccoordinates\u201d resources.",
+    "props": {
+      "duration": 3.049,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Project manager ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " resources",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "coordinates"
+      }
+    }
+  },
+  {
+    "expression": "Operating system \u201cmanages\u201d ram & \u201cprioritizes\u201d tasks.",
+    "props": {
+      "duration": 7.595,
+      "format": {
+        "operation": "&",
+        "content": [
+          {
+            "operation": "verb",
+            "content": [
+              {
+                "operation": "asset",
+                "expression": "Operating system ",
+                "assetUrl": "https://video.pexels.com"
+              },
+              {
+                "operation": "asset",
+                "expression": " ram ",
+                "assetUrl": "https://video.pexels.com"
+              }
+            ],
+            "verb": "manages"
+          },
+          {
+            "operation": "verb",
+            "content": [
+              {
+                "operation": "asset",
+                "expression": " ",
+                "assetUrl": "https://video.pexels.com"
+              },
+              {
+                "operation": "asset",
+                "expression": " tasks",
+                "assetUrl": "https://video.pexels.com"
+              }
+            ],
+            "verb": "prioritizes"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Programs & applications = Worker\u2019s projects.",
+    "props": {
+      "duration": 4.328,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "&",
+            "content": [
+              {
+                "operation": "asset",
+                "expression": " Programs ",
+                "assetUrl": "https://video.pexels.com"
+              },
+              {
+                "operation": "asset",
+                "expression": " applications ",
+                "assetUrl": "https://video.pexels.com"
+              }
+            ]
+          },
+          {
+            "operation": "asset",
+            "expression": " Worker\u2019s projects",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Program \u201cconsists of\u201d instructions.",
+    "props": {
+      "duration": 3.267,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Program ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " instructions",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "consists of"
+      }
+    }
+  },
+  {
+    "expression": "Programs \u201cneed\u201d resources.",
+    "props": {
+      "duration": 6.541,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Programs ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " resources",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "need"
+      }
+    }
+  },
+  {
+    "expression": " Bus system = office communication network.",
+    "props": {
+      "duration": 4.092,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": " Bus system ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " office communication network",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": "Bus system \u201cexchanges\u201d data.",
+    "props": {
+      "duration": 6.036,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Bus system ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " data",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "exchanges"
+      }
+    }
+  },
+  {
+    "expression": "Office communication system \u201cfacilitates\u201d workflow.",
+    "props": {
+      "duration": 3.369,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Office communication system ",
+            "assetUrl": "https://video.pexels.com"
+          },
+          {
+            "operation": "asset",
+            "expression": " workflow",
+            "assetUrl": "https://video.pexels.com"
+          }
+        ],
+        "verb": "facilitates"
+      }
+    }
+  }
+]
