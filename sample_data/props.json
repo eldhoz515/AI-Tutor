@@ -1,5 +1,44 @@
 [
   {
+    "expression": " Storage 'stores' data.",
+    "props": {
+      "duration": 4.697,
+      "format": {
+        "operation": "asset",
+        "expression": "Storage 'stores' data",
+        "assetType": "video",
+        "assetUrl": "https://player.vimeo.com/external/414210691.hd.mp4?s=2e57a44df2abe7e056adb1bd3665c1ae9dca34dc&profile_id=170&oauth2_token_id=57447761",
+        "googleImage": "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/3c/69/Isometric_what_is_data_storage_3038x1280.component.xl.ts=1699631262637.jpg/content/adobe-cms/us/en/topics/data-storage/_jcr_content/root/leadspace"
+      }
+    }
+  },
+  {
+    "expression": "Programs \u201cneed\u201d resources.",
+    "props": {
+      "duration": 6.541,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Programs",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/357563488.hd.mp4?s=42dbf432200b04ea74f2cbab4c9d455656dea0ff&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://cdn.educba.com/academy/wp-content/uploads/2020/09/What-is-Program.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "resources",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/367272285.hd.mp4?s=f02b4aa5ef646a329b797f9c277b4d0331336bfc&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://1.bp.blogspot.com/-w4itUeRRKQ0/YSPfbA_qwLI/AAAAAAAAOus/T5X5ulNlAt4HjHSn020mG_IRGrCubNf8ACLcBGAsYHQ/w0/cea5fe7ce8dac051e04b9e45356e4c9c.jpg"
+          }
+        ],
+        "verb": "need"
+      }
+    }
+  },
+  {
     "expression": "Computer=Office.",
     "props": {
       "duration": 2.569,
@@ -9,98 +48,16 @@
           {
             "operation": "asset",
             "expression": "Computer",
-            "assetUrl": "https://video.pexels.com"
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/353534763.hd.mp4?s=3f9b19c9f52f1ab3bde7ee01e65451611152154d&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg"
           },
           {
             "operation": "asset",
             "expression": "Office",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "expression": " CPU = office workers.",
-    "props": {
-      "duration": 5.595,
-      "format": {
-        "operation": "=",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " CPU ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " office workers",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "expression": " Workers \u201ccarry out\u201d instructions.",
-    "props": {
-      "duration": 4.326,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Workers ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " instructions",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "carry out"
-      }
-    }
-  },
-  {
-    "expression": "Cpu \u201cprocesses\u201d information.",
-    "props": {
-      "duration": 7.955,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": "Cpu ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " information",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "processes"
-      }
-    }
-  },
-  {
-    "expression": " Memory (RAM) = Worker\u2019s desk space.",
-    "props": {
-      "duration": 5.519,
-      "format": {
-        "operation": "=",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Memory (RAM) ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " Worker\u2019s desk space",
-            "assetUrl": "https://video.pexels.com"
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/174003112.hd.mp4?s=9c380d7ef6367969ca048d065a53adc1e105c9d9&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://5.imimg.com/data5/SELLER/Default/2021/9/OW/NW/XF/17251528/office-interior-designing-service.jpg"
           }
         ]
       }
@@ -115,70 +72,20 @@
         "content": [
           {
             "operation": "asset",
-            "expression": " CPU ",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "CPU",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/199432825.hd.mp4?s=c2a13de8faf1942afaaaa6070bb0743a845bfc0d&profile_id=119&oauth2_token_id=57447761",
+            "googleImage": "https://4.imimg.com/data4/YD/WW/MY-31969445/brand-new-cpu-sealed-pack.jpg"
           },
           {
             "operation": "asset",
-            "expression": " data",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "data",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/368789132.hd.mp4?s=33600fce2f968c7b3778ec3439df7d655a6f7585&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg"
           }
         ],
         "verb": "places"
-      }
-    }
-  },
-  {
-    "expression": " Space \u201callows\u201d task handling.",
-    "props": {
-      "duration": 4.174,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Space ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " task handling",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "allows"
-      }
-    }
-  },
-  {
-    "expression": " Storage = filing cabinets.",
-    "props": {
-      "duration": 6.14,
-      "format": {
-        "operation": "=",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Storage ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " filing cabinets",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "expression": " Storage 'stores' data.",
-    "props": {
-      "duration": 4.697,
-      "format": {
-        "operation": "asset",
-        "expression": " Storage 'stores' data",
-        "assetUrl": "https://video.pexels.com"
       }
     }
   },
@@ -191,13 +98,298 @@
         "content": [
           {
             "operation": "asset",
-            "expression": " Input devices",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "Input devices",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/446748408.hd.mp4?s=239dd3022786a5708496b57170b8b766d81adc34&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://st.adda247.com/https://www.careerpower.in/blog/wp-content/uploads/sites/2/2023/07/16233026/Input-devices.png"
           },
           {
             "operation": "asset",
-            "expression": " \u201dworkers\u201d receiving instructions",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "\u201dworkers\u201d receiving instructions",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/408408114.hd.mp4?s=031ad3db0e28927445db79c87808039d2c8607f1&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://en.pimg.jp/007/864/656/1/7864656.jpg"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Bus system = office communication network.",
+    "props": {
+      "duration": 4.092,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Bus system",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/365677713.hd.mp4?s=f8c8feae961181d347ac3321fa2c468f801efea7&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/6/68/Computer_system_bus.svg"
+          },
+          {
+            "operation": "asset",
+            "expression": "office communication network",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/423126565.hd.mp4?s=42a3f51c4ec9b081e742df84f9b904bdcaa430c6&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://cdn5.vectorstock.com/i/1000x1000/26/39/business-office-networking-and-communication-vector-1892639.jpg"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Workers \u201ccarry out\u201d instructions.",
+    "props": {
+      "duration": 4.326,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Workers",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/325796130.hd.mp4?s=d59b7160b532bfb0b49376691f6e5b5bf6bfaaec&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://www.newsclick.in/sites/default/files/2018-01/ILO%20Report%20Indian%20Workers_0.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "instructions",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/420459070.hd.mp4?s=7a59ed1d24c794d5ff622030c85288d241a8f3e3&profile_id=169&oauth2_token_id=57447761",
+            "googleImage": "https://assets-global.website-files.com/610004329b339d60c2cf059c/630de068a7ad3f7f20c47281_StepbyStepGuide.jpg"
+          }
+        ],
+        "verb": "carry out"
+      }
+    }
+  },
+  {
+    "expression": " Operating System = Office Manager.",
+    "props": {
+      "duration": 3.677,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Operating System",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/465043457.hd.mp4?s=7a820afa919424c73b9d55682d81d2b29e1059d3&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/800px-Operating_system_placement.svg.png"
+          },
+          {
+            "operation": "asset",
+            "expression": "Office Manager",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/473177416.hd.mp4?s=873af58ed96fdaa4b8bdd1588f38e684b11e9598&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://riveterconsulting.com/wp-content/uploads/2021/10/housmanbannerresize.jpg"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Storage = filing cabinets.",
+    "props": {
+      "duration": 6.14,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Storage",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/365676668.hd.mp4?s=7cddfb398ff807b75b5e4b32b8533c6917ccd1a3&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://spacevalet.in/wp-content/uploads/2023/10/storage-solutions-Bangalore.png"
+          },
+          {
+            "operation": "asset",
+            "expression": "filing cabinets",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/381327124.hd.mp4?s=005337dbfc67ac11961c98dd09b31a6a2c868af9&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://5.imimg.com/data5/SELLER/Default/2023/9/345729310/MD/AB/IA/182872199/office-file-cabinet-500x500.jpg"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": "Cpu \u201cprocesses\u201d information.",
+    "props": {
+      "duration": 7.955,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Cpu",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/199432825.hd.mp4?s=c2a13de8faf1942afaaaa6070bb0743a845bfc0d&profile_id=119&oauth2_token_id=57447761",
+            "googleImage": "https://4.imimg.com/data4/YD/WW/MY-31969445/brand-new-cpu-sealed-pack.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "information",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/369268218.hd.mp4?s=0297cea129c7bd82bb0ed6d982b0b6b383d9a15e&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://keydifferences.com/wp-content/uploads/2016/09/data-vs-informaton.jpg"
+          }
+        ],
+        "verb": "processes"
+      }
+    }
+  },
+  {
+    "expression": "Bus system \u201cexchanges\u201d data.",
+    "props": {
+      "duration": 6.036,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Bus system",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/365677713.hd.mp4?s=f8c8feae961181d347ac3321fa2c468f801efea7&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/6/68/Computer_system_bus.svg"
+          },
+          {
+            "operation": "asset",
+            "expression": "data",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/368789132.hd.mp4?s=33600fce2f968c7b3778ec3439df7d655a6f7585&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg"
+          }
+        ],
+        "verb": "exchanges"
+      }
+    }
+  },
+  {
+    "expression": "Office communication system \u201cfacilitates\u201d workflow.",
+    "props": {
+      "duration": 3.369,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Office communication system",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/439043656.hd.mp4?s=72ac00b4028ab108bf9afe7a2e9ce6ddec678f85&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://blog.vantagecircle.com/content/images/2020/06/Office-Communication-01.png"
+          },
+          {
+            "operation": "asset",
+            "expression": "workflow",
+            "assetType": "image",
+            "assetUrl": "none",
+            "googleImage": "https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2019Q2/workflow/content-approval-workflow-example.png"
+          }
+        ],
+        "verb": "facilitates"
+      }
+    }
+  },
+  {
+    "expression": " Project manager \u201ccoordinates\u201d resources.",
+    "props": {
+      "duration": 3.049,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Project manager",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/482846951.hd.mp4?s=97be752968c0e27ae13a807da29943bbce4319c5&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://www.feedough.com/wp-content/uploads/2021/09/project-manager-1024x576.webp"
+          },
+          {
+            "operation": "asset",
+            "expression": "resources",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/367272285.hd.mp4?s=f02b4aa5ef646a329b797f9c277b4d0331336bfc&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://1.bp.blogspot.com/-w4itUeRRKQ0/YSPfbA_qwLI/AAAAAAAAOus/T5X5ulNlAt4HjHSn020mG_IRGrCubNf8ACLcBGAsYHQ/w0/cea5fe7ce8dac051e04b9e45356e4c9c.jpg"
+          }
+        ],
+        "verb": "coordinates"
+      }
+    }
+  },
+  {
+    "expression": " Memory (RAM) = Worker\u2019s desk space.",
+    "props": {
+      "duration": 5.519,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Memory (RAM)",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/462689518.hd.mp4?s=1d9257fc574aeb7a3d3c2b2ca3c2e82bcaf98161&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://static.javatpoint.com/computer/images/ram.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "Worker\u2019s desk space",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/542511987.hd.mp4?s=b208c9cd183286c85abe1fd6ebf2f74535bc0033&profile_id=172&oauth2_token_id=57447761",
+            "googleImage": "https://media.istockphoto.com/id/487798098/photo/casually-dressed-workers-in-a-busy-open-plan-office.jpg?s=612x612&w=0&k=20&c=5ztRp23u1Rv91gSRyRXZrpfUPjC6DHdnm1lNLttCxzM="
+          }
+        ]
+      }
+    }
+  },
+  {
+    "expression": " Space \u201callows\u201d task handling.",
+    "props": {
+      "duration": 4.174,
+      "format": {
+        "operation": "verb",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "Space",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/314181352.hd.mp4?s=03e7a8ddba6566f8a62cd7f8a8da7d79461c3dbd&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "task handling",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/451075932.hd.mp4?s=d83f14c069ce12d63b9f496555d7931beb794257&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://assets.plan.io/images/blog/what-is-task-management.png"
+          }
+        ],
+        "verb": "allows"
+      }
+    }
+  },
+  {
+    "expression": " CPU = office workers.",
+    "props": {
+      "duration": 5.595,
+      "format": {
+        "operation": "=",
+        "content": [
+          {
+            "operation": "asset",
+            "expression": "CPU",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/199432825.hd.mp4?s=c2a13de8faf1942afaaaa6070bb0743a845bfc0d&profile_id=119&oauth2_token_id=57447761",
+            "googleImage": "https://4.imimg.com/data4/YD/WW/MY-31969445/brand-new-cpu-sealed-pack.jpg"
+          },
+          {
+            "operation": "asset",
+            "expression": "office workers",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/452226880.hd.mp4?s=82977c2272a41b9809a8eec867fd28bc0363ac88&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://nypost.com/wp-content/uploads/sites/2/2019/04/workers-feeling-479.jpg?quality=75&strip=all"
           }
         ]
       }
@@ -212,99 +404,17 @@
         "content": [
           {
             "operation": "asset",
-            "expression": " Output devices ",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "Output devices",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/545861896.hd.mp4?s=714b240a9ce7a30373c1154e774b42e08595437d&profile_id=174&oauth2_token_id=57447761",
+            "googleImage": "https://www.careerpower.in/blog/wp-content/uploads/sites/2/2023/07/16233029/output-devices.png"
           },
           {
             "operation": "asset",
-            "expression": " workers results board",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "expression": " Operating System = Office Manager.",
-    "props": {
-      "duration": 3.677,
-      "format": {
-        "operation": "=",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Operating System ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " Office Manager",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "expression": " Project manager \u201ccoordinates\u201d resources.",
-    "props": {
-      "duration": 3.049,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Project manager ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " resources",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "coordinates"
-      }
-    }
-  },
-  {
-    "expression": "Operating system \u201cmanages\u201d ram & \u201cprioritizes\u201d tasks.",
-    "props": {
-      "duration": 7.595,
-      "format": {
-        "operation": "&",
-        "content": [
-          {
-            "operation": "verb",
-            "content": [
-              {
-                "operation": "asset",
-                "expression": "Operating system ",
-                "assetUrl": "https://video.pexels.com"
-              },
-              {
-                "operation": "asset",
-                "expression": " ram ",
-                "assetUrl": "https://video.pexels.com"
-              }
-            ],
-            "verb": "manages"
-          },
-          {
-            "operation": "verb",
-            "content": [
-              {
-                "operation": "asset",
-                "expression": " ",
-                "assetUrl": "https://video.pexels.com"
-              },
-              {
-                "operation": "asset",
-                "expression": " tasks",
-                "assetUrl": "https://video.pexels.com"
-              }
-            ],
-            "verb": "prioritizes"
+            "expression": "workers results board",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/372182116.hd.mp4?s=ada5ada2cd0e1f771487d09884264f1069093eec&profile_id=175&oauth2_token_id=57447761",
+            "googleImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQhrS9Cyt2M_iN5Yv64WE1RcGwpEfywb2Q2QuaDMP3g8bll5dzjSUK8cDS4GU2RSJ-oSJrpL9P1TRRqAQ2G0XuuHXczvxIjnn9Rn3luYvDiGlp9P5xXOUK7XZv42W3Q7tZWbRyQARqHJS7kJwV48kzQSZsDPVFDgGZWaHUZlg9SN5FSIdsg5C-Myv9dqk/s1200/social-worker-result-september-2023-passers.jpg"
           }
         ]
       }
@@ -322,20 +432,26 @@
             "content": [
               {
                 "operation": "asset",
-                "expression": " Programs ",
-                "assetUrl": "https://video.pexels.com"
+                "expression": "Programs",
+                "assetType": "video",
+                "assetUrl": "https://player.vimeo.com/external/357563488.hd.mp4?s=42dbf432200b04ea74f2cbab4c9d455656dea0ff&profile_id=175&oauth2_token_id=57447761",
+                "googleImage": "https://cdn.educba.com/academy/wp-content/uploads/2020/09/What-is-Program.jpg"
               },
               {
                 "operation": "asset",
-                "expression": " applications ",
-                "assetUrl": "https://video.pexels.com"
+                "expression": "applications",
+                "assetType": "video",
+                "assetUrl": "https://player.vimeo.com/external/406187011.hd.mp4?s=3dbae0490d43f2d91d2812137f663dba6cf6c040&profile_id=171&oauth2_token_id=57447761",
+                "googleImage": "https://images.spiceworks.com/wp-content/uploads/2022/12/26124808/Mobile-Apps.jpg"
               }
             ]
           },
           {
             "operation": "asset",
-            "expression": " Worker\u2019s projects",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "Worker\u2019s projects",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/510531679.hd.mp4?s=0a2b98e7926b9fa5cb404071c6ffab6764ccb258&profile_id=170&oauth2_token_id=57447761",
+            "googleImage": "https://images.livemint.com/img/2022/06/20/600x338/labour1--621x414_1655737046895.JPG"
           }
         ]
       }
@@ -350,13 +466,17 @@
         "content": [
           {
             "operation": "asset",
-            "expression": " Program ",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "Program",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/173394760.hd.mp4?s=a05c3ce4b94fe66dec311385702fd65c6b2f43dc&profile_id=119&oauth2_token_id=57447761",
+            "googleImage": "https://upload.wikimedia.org/wikipedia/commons/3/39/C_Hello_World_Program.png"
           },
           {
             "operation": "asset",
-            "expression": " instructions",
-            "assetUrl": "https://video.pexels.com"
+            "expression": "instructions",
+            "assetType": "video",
+            "assetUrl": "https://player.vimeo.com/external/420459070.hd.mp4?s=7a59ed1d24c794d5ff622030c85288d241a8f3e3&profile_id=169&oauth2_token_id=57447761",
+            "googleImage": "https://assets-global.website-files.com/610004329b339d60c2cf059c/630de068a7ad3f7f20c47281_StepbyStepGuide.jpg"
           }
         ],
         "verb": "consists of"
@@ -364,89 +484,47 @@
     }
   },
   {
-    "expression": "Programs \u201cneed\u201d resources.",
+    "expression": "Operating system \u201cmanages\u201d ram & \u201cprioritizes\u201d tasks.",
     "props": {
-      "duration": 6.541,
+      "duration": 7.595,
       "format": {
-        "operation": "verb",
+        "operation": "&",
         "content": [
           {
-            "operation": "asset",
-            "expression": "Programs ",
-            "assetUrl": "https://video.pexels.com"
+            "operation": "verb",
+            "content": [
+              {
+                "operation": "asset",
+                "expression": "Operating system",
+                "assetType": "video",
+                "assetUrl": "https://player.vimeo.com/external/465043457.hd.mp4?s=7a820afa919424c73b9d55682d81d2b29e1059d3&profile_id=170&oauth2_token_id=57447761",
+                "googleImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/800px-Operating_system_placement.svg.png"
+              },
+              {
+                "operation": "asset",
+                "expression": "ram",
+                "assetType": "video",
+                "assetUrl": "https://player.vimeo.com/external/509779668.hd.mp4?s=0db4ef4a920bc155c853eea44708c2ec66a1cf7f&profile_id=170&oauth2_token_id=57447761",
+                "googleImage": "https://static.javatpoint.com/computer/images/ram.jpg"
+              }
+            ],
+            "verb": "manages"
           },
           {
-            "operation": "asset",
-            "expression": " resources",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "need"
-      }
-    }
-  },
-  {
-    "expression": " Bus system = office communication network.",
-    "props": {
-      "duration": 4.092,
-      "format": {
-        "operation": "=",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": " Bus system ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " office communication network",
-            "assetUrl": "https://video.pexels.com"
+            "operation": "verb",
+            "content": [
+              { "operation": "void" },
+              {
+                "operation": "asset",
+                "expression": "tasks",
+                "assetType": "video",
+                "assetUrl": "https://player.vimeo.com/external/537868903.hd.mp4?s=ce3def8ad58fe6620fd6e3fb6b97ae2740f63591&profile_id=172&oauth2_token_id=57447761",
+                "googleImage": "https://www.sweetprocess.com/wp-content/uploads/2022/10/task-management-3.png"
+              }
+            ],
+            "verb": "prioritizes"
           }
         ]
-      }
-    }
-  },
-  {
-    "expression": "Bus system \u201cexchanges\u201d data.",
-    "props": {
-      "duration": 6.036,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": "Bus system ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " data",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "exchanges"
-      }
-    }
-  },
-  {
-    "expression": "Office communication system \u201cfacilitates\u201d workflow.",
-    "props": {
-      "duration": 3.369,
-      "format": {
-        "operation": "verb",
-        "content": [
-          {
-            "operation": "asset",
-            "expression": "Office communication system ",
-            "assetUrl": "https://video.pexels.com"
-          },
-          {
-            "operation": "asset",
-            "expression": " workflow",
-            "assetUrl": "https://video.pexels.com"
-          }
-        ],
-        "verb": "facilitates"
       }
     }
   }
