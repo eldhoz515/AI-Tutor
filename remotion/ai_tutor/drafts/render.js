@@ -1,19 +1,8 @@
-export const staging = false;
-export const FPS = 30;
-export const voiceLocationPrefix =
-	'https://ai-tutor-s3.s3.ap-south-1.amazonaws.com/voices';
-export const subLength = 100;
-export const imageAnimations = {
-	s: [1.3, 1],
-	tx: [100, 1],
-	ntx: [100, 0],
-	ty: [100, 0],
-	nty: [100, 0],
-	rx: [45, 0],
-	ry: [45, 0],
-	rz: [45, 0],
-};
-export const props = {
+import {renderMediaOnLambda} from '@remotion/lambda/client';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const props = {
 	speechMarks: {
 		speechMarks: [
 			{time: 25, value: 'Storage'},
@@ -67,3 +56,14 @@ export const props = {
 		],
 	},
 };
+
+const response = await renderMediaOnLambda({
+	region: process.env.region,
+	functionName: process.env.functionName,
+	composition: 'AiTutor',
+	serveUrl: process.env.serveUrl,
+	codec: 'h264',
+	inputProps: props,
+});
+
+console.log(response);

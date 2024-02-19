@@ -4,8 +4,6 @@ import {FPS, props} from './constants';
 import {getDurationInFrames} from './utils';
 import './style.css';
 
-// Each <Composition> is an entry in the sidebar!
-
 export const RemotionRoot: React.FC = () => {
 	// const props = getInputProps();
 

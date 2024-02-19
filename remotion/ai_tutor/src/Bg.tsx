@@ -1,9 +1,8 @@
-import {Easing} from 'remotion';
-import {useCallback, useEffect, useState} from 'react';
+import {Easing, OffthreadVideo} from 'remotion';
+import {useEffect, useState} from 'react';
 import {
 	AbsoluteFill,
 	Series,
-	Video,
 	interpolate,
 	staticFile,
 	useCurrentFrame,
@@ -26,7 +25,7 @@ function getBgUrls(obj) {
 export const Bg = ({format}) => {
 	const frame = useCurrentFrame();
 	const [bgUrls, setBgUrls] = useState([]);
-	const {durationInFrames, fps} = useVideoConfig();
+	const {durationInFrames} = useVideoConfig();
 	useEffect(() => {
 		setBgUrls(getBgUrls(format));
 	}, [format]);
@@ -38,17 +37,21 @@ export const Bg = ({format}) => {
 					const opacity = interpolate(
 						frame,
 						[subDuration * i, subDuration * (i + 0.5), subDuration * (i + 1)],
-						[0.02, 0.2, 0.02],
+						[0.01, 0.1, 0.01],
 						{
 							extrapolateLeft: 'clamp',
 							extrapolateRight: 'clamp',
-							easing: Easing.bezier(.93,.26,.65,.58),
+							easing: Easing.bezier(0.93, 0.26, 0.65, 0.58),
 						}
 					);
 					return (
 						<Series.Sequence durationInFrames={subDuration}>
-							<div style={{opacity}}>
-								<Video muted src={staging ? staticFile('bg.mp4') : bgUrl} />
+							<div className="w-full h-full" style={{opacity}}>
+								<OffthreadVideo
+									muted
+									className="w-full h-full object-cover"
+									src={staging ? staticFile('bg.mp4') : bgUrl}
+								/>
 							</div>
 						</Series.Sequence>
 					);

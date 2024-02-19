@@ -4,7 +4,7 @@ import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {ImageBox} from './ImageBox';
 import {imageAnimations, subLength} from './constants';
 import {Operator} from './Operator';
-import {getRandom} from './utils';
+import {getRandom, getRandomColor} from './utils';
 
 export const Fg = ({format, from, width, height}) => {
 	const frame = useCurrentFrame();
@@ -18,12 +18,12 @@ export const Fg = ({format, from, width, height}) => {
 			const showAsRow = ['=', 'verb'].includes(format.operation);
 			const contentLength = format.content.length;
 			const subWidth = showAsRow ? 100 / contentLength - 5 : subLength;
-			const subHeight = showAsRow ? subLength : 100 / contentLength - 5;
+			const subHeight = showAsRow ? subLength : 90 / contentLength - 5;
 			return (
 				<div
 					className={` h-full flex ${
 						showAsRow ? 'flex-row' : 'flex-col'
-					} justify-between items-center p-[5%]`}
+					} justify-between items-center p-[3%]`}
 					style={{width: `${width}%`, height: `${height}%`}}
 				>
 					{format.content.map((subFormat, i) => {
@@ -48,6 +48,11 @@ export const Fg = ({format, from, width, height}) => {
 													contentLength
 											)
 										}
+										textColor={getRandomColor(
+											format.operation === 'verb'
+												? format.verb
+												: format.operation
+										)}
 									/>
 								)}
 							</>
@@ -64,6 +69,7 @@ export const Fg = ({format, from, width, height}) => {
 					height={height}
 					from={from}
 					animation={getRandom(format.expression, Object.keys(imageAnimations))}
+					textColor={getRandomColor(format.expression)}
 				/>
 			);
 		default:

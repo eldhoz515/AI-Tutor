@@ -54,7 +54,7 @@ def extractImg(driver, imgNo):
 
 
 def getImg(driver, query):
-    url = f"https://www.google.com/search?q={query}&tbm=isch"
+    url = f"https://www.google.com/search?q={query}+png&tbm=isch"
     driver.get(url)
     time.sleep(3)
     return extractImg(driver, 1)

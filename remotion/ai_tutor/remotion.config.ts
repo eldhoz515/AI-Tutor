@@ -3,12 +3,10 @@
 
 // Note: When using the Node.JS APIs, the config file doesn't apply. Instead, pass options directly to the APIs
 
-import {Config} from '@remotion/cli/config';
-import { enableTailwind } from "@remotion/tailwind";
- 
-Config.overrideWebpackConfig((currentConfiguration) => {
-  return enableTailwind(currentConfiguration);
-});
+import { Config } from "@remotion/cli/config";
+import { webpackOverride } from "./src/webpack-override";
+
+Config.overrideWebpackConfig(webpackOverride);
 
 Config.setVideoImageFormat('jpeg');
 Config.setOverwriteOutput(true);

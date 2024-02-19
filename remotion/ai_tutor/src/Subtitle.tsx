@@ -36,7 +36,7 @@ export const Subtitle = ({speechMarks}) => {
 					return (
 						<Series.Sequence durationInFrames={subDuration}>
 							<div
-								className="text-9xl font-bold h-fit mb-5 mt-auto w-full text-center"
+								className="text-7xl font-bold h-fit mb-5 mt-auto w-full text-center"
 								style={{transform: `scale(${scaleX},${scaleY})`}}
 							>
 								{speechMark.value}

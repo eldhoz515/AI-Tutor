@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "remotion studio",
-		"build": "remotion render HelloWorld out/video.mp4",
+		"build": "remotion render AiTutor out/video.mp4",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
@@ -14,6 +14,7 @@
 	"dependencies": {
 		"@remotion/cli": "4.0.110",
 		"@remotion/lambda": "^4.0.110",
+		"@remotion/renderer": "4.0.110",
 		"@remotion/zod-types": "4.0.110",
 		"dotenv": "^16.4.3",
 		"react": "^18.0.0",

@@ -1,5 +1,5 @@
 import {Easing} from 'remotion';
-import {Audio, Series, interpolate, staticFile} from 'remotion';
+import {Audio, interpolate, staticFile} from 'remotion';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {staging, voiceLocationPrefix} from './constants';
 import {getDurationInFrames} from './utils';
@@ -42,13 +42,13 @@ export const AiTutor = (props) => {
 				endAt={getDurationInFrames(
 					props.speechMarks.start + props.speechMarks.duration
 				)}
-				volume={0.1}
+				// volume={0.1}
 			/>
-			{/* <Bg format={props.format} /> */}
+			<Bg format={props.format} />
 			<AbsoluteFill style={{transform: `scale(${scale})`, opacity}}>
 				<Fg format={props.format} from={0} width={100} height={100} />
 			</AbsoluteFill>
-			{/* <Subtitle speechMarks={props.speechMarks.speechMarks} /> */}
+			<Subtitle speechMarks={props.speechMarks.speechMarks} />
 		</AbsoluteFill>
 	);
 };
