@@ -39,7 +39,7 @@ export const Operator = ({format, from, textColor}) => {
 					<Arrow
 						fill={textColor}
 						offset={textStrokeInterpolate}
-						id={format.verb}
+						id={format.verb.replace(/\s/g, '')}
 					/>
 				</div>
 				<span style={{opacity: textInterpolate, color: textColor}}>
