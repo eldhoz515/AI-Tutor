@@ -23,6 +23,7 @@
 	},
 	"devDependencies": {
 		"@remotion/eslint-config": "4.0.110",
+		"@remotion/tailwind": "^4.0.110",
 		"@types/react": "^18.0.26",
 		"@types/web": "^0.0.86",
 		"eslint": "^8.43.0",
