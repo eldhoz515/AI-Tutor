@@ -176,7 +176,9 @@ def getSentenceSpeechMarks(speechMarks):
             wordMarks.append(dict(time=obj["time"] - time, value=obj["value"]))
     speechMarksBySentence.append(
         dict(
-            speechMarks=wordMarks, duration=(wordMarks[-1]["time"] + 1000 - time) / 1000
+            speechMarks=wordMarks,
+            duration=(wordMarks[-1]["time"] + 1000) / 1000,
+            start=time / 1000,
         )
     )
     return speechMarksBySentence
