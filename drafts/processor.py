@@ -64,7 +64,7 @@ def getGoogleImage(query):
 
 
 def cleanExpression(expression):
-    return expression.replace('.','')
+    return expression.replace('.','').replace('(','').replace(')','').strip()
 
 
 def processExpression(i,expression):
@@ -85,7 +85,7 @@ def processExpression(i,expression):
             format["content"] = []
             pattern = r"\u201c(.*?)\u201d"
             withoutVerb = re.sub(pattern, "$$", expression)
-            format["verb"] = re.findall(pattern, expression)[0]
+            format["verb"] = cleanExpression(re.findall(pattern, expression)[0])
             for part in withoutVerb.split("$$"):
                 if len(part):
                     format["content"].append(processExpression(i,part))
@@ -95,14 +95,14 @@ def processExpression(i,expression):
             format["content"] = []
             pattern = r"\'(.*?)\'"
             withoutVerb = re.sub(pattern, "$$", expression)
-            format["verb"] = re.findall(pattern, expression)[0]
+            format["verb"] = cleanExpression(re.findall(pattern, expression)[0])
             for part in withoutVerb.split("$$"):
                 if len(part):
                     format["content"].append(processExpression(i,part))
             return format
 
 
-        query = expression.strip()
+        query = cleanExpression(expression)
         if not len(query):
             format["operation"]="void"
             return format

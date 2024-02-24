@@ -33,9 +33,15 @@ export const Operator = ({format, from, textColor}) => {
 		easing: Easing.bezier(0.15, 0.67, 0.54, 0.7),
 	});
 	if (format.operation === 'verb') {
+		const reverse =
+			format.content.length < 2 || format.content[1]?.operation === 'void';
 		return (
 			<div style={{opacity}} className="text-4xl font-bold relative w-fit">
-				<div className="absolute min-w-[300px] w-[200%] top-full -translate-y-[43%] left-1/2 -translate-x-[30%] -z-10">
+				<div
+					className={`absolute min-w-[300px] w-[200%] top-full -translate-y-[43%] left-1/2 -translate-x-[${
+						reverse ? '60' : '30'
+					}%] -z-10 ${reverse && '-scale-x-100'}`}
+				>
 					<Arrow
 						fill={textColor}
 						offset={textStrokeInterpolate}

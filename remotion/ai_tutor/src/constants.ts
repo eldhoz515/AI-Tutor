@@ -14,56 +14,49 @@ export const imageAnimations = {
 	rz: [45, 0],
 };
 export const props = {
-	speechMarks: {
-		speechMarks: [
-			{time: 25, value: 'Storage'},
-			{time: 719, value: 'Hard'},
-			{time: 969, value: 'Drive'},
-			{time: 1250, value: 'or'},
-			{time: 1385, value: 'SSD'},
-			{time: 2160, value: 'The'},
-			{time: 2254, value: 'storage'},
-			{time: 2660, value: 'in'},
-			{time: 2712, value: 'a'},
-			{time: 2754, value: 'computer'},
-			{time: 3160, value: 'is'},
-			{time: 3223, value: 'similar'},
-			{time: 3546, value: 'to'},
-			{time: 3650, value: 'the'},
-			{time: 3723, value: 'filing'},
-			{time: 4066, value: 'cabinets'},
-			{time: 4483, value: 'or'},
-			{time: 4556, value: 'storage'},
-			{time: 4900, value: 'units'},
-			{time: 5160, value: 'in'},
-			{time: 5212, value: 'an'},
-			{time: 5275, value: 'office'},
-		],
-		duration: 6.14,
-		start: 34.766,
+	"speechMarks": {
+	  "speechMarks": [
+		{ "time": 25, "value": "This" },
+		{ "time": 250, "value": "is" },
+		{ "time": 362, "value": "where" },
+		{ "time": 525, "value": "the" },
+		{ "time": 612, "value": "'work'" },
+		{ "time": 900, "value": "on" },
+		{ "time": 987, "value": "the" },
+		{ "time": 1062, "value": "data" },
+		{ "time": 1325, "value": "takes" },
+		{ "time": 1650, "value": "place" },
+		{ "time": 2237, "value": "similar" },
+		{ "time": 2675, "value": "to" },
+		{ "time": 2800, "value": "the" },
+		{ "time": 2887, "value": "processing" },
+		{ "time": 3500, "value": "of" },
+		{ "time": 3587, "value": "books" },
+		{ "time": 3925, "value": "in" },
+		{ "time": 3987, "value": "the" },
+		{ "time": 4050, "value": "library" }
+	  ],
+	  "duration": 5.105,
+	  "start": 60.425
 	},
-	audioKey: 'test',
-	format: {
-		operation: '=',
-		content: [
-			{
-				operation: 'asset',
-				expression: 'Storage',
-				assetType: 'video',
-				assetUrl:
-					'https://player.vimeo.com/external/365676668.hd.mp4?s=7cddfb398ff807b75b5e4b32b8533c6917ccd1a3&profile_id=170&oauth2_token_id=57447761',
-				googleImage:
-					'https://spacevalet.in/wp-content/uploads/2023/10/storage-solutions-Bangalore.png',
-			},
-			{
-				operation: 'asset',
-				expression: 'filing cabinets',
-				assetType: 'video',
-				assetUrl:
-					'https://player.vimeo.com/external/381327124.hd.mp4?s=005337dbfc67ac11961c98dd09b31a6a2c868af9&profile_id=175&oauth2_token_id=57447761',
-				googleImage:
-					'https://5.imimg.com/data5/SELLER/Default/2023/9/345729310/MD/AB/IA/182872199/office-file-cabinet-500x500.jpg',
-			},
-		],
+	"audioKey": "16debc05-bfad-41c7-8bd3-54adb88c722f",
+	"format": {
+	  "operation": "verb",
+	  "content": [
+		{
+		  "operation": "asset",
+		  "expression": "Work(",
+		  "assetUrl": "https://player.vimeo.com/external/507868868.hd.mp4?s=c52fe501ac4619f9e3403e5a1f61c7e4da43338d&profile_id=172&oauth2_token_id=57447761",
+		  "googleImage": "https://www.betterup.com/hubfs/Man%20has%20overwork%20and%20sitting%20with%20laptop%20and%20table%20lamp.%20Mental%20work%20with%20paper.%20Empty%20office.jpg"
+		},
+		{
+		  "operation": "void",
+		  "expression": ")",
+		  "assetUrl": "https://player.vimeo.com/external/364789180.hd.mp4?s=e0c8f52690e6a030cbd81515decc8efe32b36148&profile_id=174&oauth2_token_id=57447761",
+		  "googleImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Corner_bracket_left_black.svg/1200px-Corner_bracket_left_black.svg.png"
+		}
+	  ],
+	  "verb": "work on the data"
 	},
-};
+	"renderId": "fg7wtjzhev"
+  };
