@@ -3,24 +3,26 @@ from tempfile import mkdtemp
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import json, time, requests
+import json, time, requests, os
 
 
 def checkImg(url):
     try:
+        if not url.startswith(os.environ.get("urlPrefix")):
+            return False
         response = requests.get(url)
         if response.status_code == 200:
             return True
         else:
             return False
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         print("Error:", e)
         return False
 
 
 def extractImg(driver, imgNo):
     print(f"trying imgNo={imgNo}")
-    if imgNo > 10:
+    if imgNo > int(os.environ.get("retryLimit")):
         raise Exception("Couldn't get img")
     try:
         try:
@@ -28,9 +30,14 @@ def extractImg(driver, imgNo):
                 By.XPATH, f'//*[@id="islrg"]/div[1]/div[{imgNo}]/a[1]'
             )
             x.click()
-        except:
+        except Exception as e:
+            print(e)
             driver.find_elements(By.TAG_NAME, "button")[0].click()
-        wait = WebDriverWait(driver, 10)
+            x = driver.find_element(
+                By.XPATH, f'//*[@id="islrg"]/div[1]/div[{imgNo}]/a[1]'
+            )
+            x.click()
+        wait = WebDriverWait(driver, int(os.environ.get("waitTimeout")))
         wait.until(
             EC.element_to_be_clickable(
                 (
@@ -39,7 +46,7 @@ def extractImg(driver, imgNo):
                 )
             )
         )
-        time.sleep(3)
+        time.sleep(int(os.environ.get("imgLoadingSleepTime")))
         imgUrl = driver.find_element(
             By.XPATH,
             '//*[@id="Sva75c"]/div[2]/div[2]/div[2]/div[2]/c-wiz/div/div/div/div/div[3]/div[1]/a/img',
@@ -54,9 +61,10 @@ def extractImg(driver, imgNo):
 
 
 def getImg(driver, query):
-    url = f"https://www.google.com/search?q={query}+png&tbm=isch"
+    query = query.replace(" ", "+")
+    url = f"https://www.google.com/search?q={query}&tbm=isch"
     driver.get(url)
-    time.sleep(3)
+    time.sleep(int(os.environ.get("siteLoadingSleepTime")))
     return extractImg(driver, 1)
 
 

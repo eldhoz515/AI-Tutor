@@ -4,9 +4,9 @@ dotenv.config();
 
 const { functionName } = await deployFunction({
   region: process.env.region,
-  timeoutInSeconds: 120,
-  memorySizeInMb: 2048,
+  timeoutInSeconds: 10*60,
+  memorySizeInMb: 3008,
   createCloudWatchLogGroup: true,
-  diskSizeInMb: 2048,
+  diskSizeInMb: 4096,
 });
 console.log(functionName);

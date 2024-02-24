@@ -1,5 +1,6 @@
-/venv
+venv
 .env
 node_modules
 renders
 *.pyc
+*.venv
