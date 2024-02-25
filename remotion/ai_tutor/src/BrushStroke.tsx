@@ -1,7 +1,6 @@
 import { Gradient } from "./Gradient";
 
 export const BrushStroke = ({fill, offset, id}) => {
-	console.log(id)
 	return (
 		<svg width="100%" viewBox="0 0 1100 567.4635">
 			<defs>

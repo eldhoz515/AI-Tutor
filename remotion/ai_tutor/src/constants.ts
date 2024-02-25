@@ -17,46 +17,47 @@ export const props = {
 	"speechMarks": {
 	  "speechMarks": [
 		{ "time": 25, "value": "This" },
-		{ "time": 250, "value": "is" },
-		{ "time": 362, "value": "where" },
-		{ "time": 525, "value": "the" },
-		{ "time": 612, "value": "'work'" },
-		{ "time": 900, "value": "on" },
-		{ "time": 987, "value": "the" },
-		{ "time": 1062, "value": "data" },
-		{ "time": 1325, "value": "takes" },
-		{ "time": 1650, "value": "place" },
-		{ "time": 2237, "value": "similar" },
-		{ "time": 2675, "value": "to" },
-		{ "time": 2800, "value": "the" },
-		{ "time": 2887, "value": "processing" },
-		{ "time": 3500, "value": "of" },
-		{ "time": 3587, "value": "books" },
-		{ "time": 3925, "value": "in" },
-		{ "time": 3987, "value": "the" },
-		{ "time": 4050, "value": "library" }
+		{ "time": 262, "value": "is" },
+		{ "time": 362, "value": "similar" },
+		{ "time": 775, "value": "to" },
+		{ "time": 900, "value": "the" },
+		{ "time": 987, "value": "client" },
+		{ "time": 1375, "value": "sending" },
+		{ "time": 1687, "value": "a" },
+		{ "time": 1737, "value": "request" },
+		{ "time": 2200, "value": "to" },
+		{ "time": 2275, "value": "the" },
+		{ "time": 2450, "value": "API" },
+		{ "time": 2962, "value": "for" },
+		{ "time": 3162, "value": "a" },
+		{ "time": 3200, "value": "specific" },
+		{ "time": 3737, "value": "operation" },
+		{ "time": 4300, "value": "or" },
+		{ "time": 4400, "value": "piece" },
+		{ "time": 4687, "value": "of" },
+		{ "time": 4775, "value": "data" }
 	  ],
-	  "duration": 5.105,
-	  "start": 60.425
+	  "duration": 5.63,
+	  "start": 31.33
 	},
-	"audioKey": "16debc05-bfad-41c7-8bd3-54adb88c722f",
+	"audioKey": "61dc6fc2-eff5-4207-90ac-c37f5bcef11e",
 	"format": {
 	  "operation": "verb",
 	  "content": [
 		{
 		  "operation": "asset",
-		  "expression": "Work(",
-		  "assetUrl": "https://player.vimeo.com/external/507868868.hd.mp4?s=c52fe501ac4619f9e3403e5a1f61c7e4da43338d&profile_id=172&oauth2_token_id=57447761",
-		  "googleImage": "https://www.betterup.com/hubfs/Man%20has%20overwork%20and%20sitting%20with%20laptop%20and%20table%20lamp.%20Mental%20work%20with%20paper.%20Empty%20office.jpg"
+		  "expression": "Client",
+		  "assetUrl": "https://player.vimeo.com/external/419853557.hd.mp4?s=33a44bff30a000aca40eca5880039b3e8684e99f&profile_id=170&oauth2_token_id=57447761",
+		  "googleImage": "https://www.hubspot.com/hubfs/clientvscustomer_2.webp"
 		},
 		{
-		  "operation": "void",
-		  "expression": ")",
-		  "assetUrl": "https://player.vimeo.com/external/364789180.hd.mp4?s=e0c8f52690e6a030cbd81515decc8efe32b36148&profile_id=174&oauth2_token_id=57447761",
-		  "googleImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Corner_bracket_left_black.svg/1200px-Corner_bracket_left_black.svg.png"
+		  "operation": "asset",
+		  "expression": "request",
+		  "assetUrl": "https://player.vimeo.com/external/553215351.hd.mp4?s=85b6221fa91d3dfdd87d28b025dd61006d6fc4c0&profile_id=175&oauth2_token_id=57447761",
+		  "googleImage": "https://media.istockphoto.com/id/1415598585/vector/thin-outline-icon-sheet-of-paper-or-document-in-a-persons-hand-such-line-sign-as-request.jpg?s=612x612&w=0&k=20&c=OEg3W67Td0rqYuNBk_a0lTRWqFbCx2OG7xdaGw7VykE="
 		}
 	  ],
-	  "verb": "work on the data"
+	  "verb": "sends"
 	},
-	"renderId": "fg7wtjzhev"
+	"renderId": "lkk01rh149"
   };

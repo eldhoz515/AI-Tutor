@@ -2,7 +2,7 @@ import {useVideoConfig} from 'remotion';
 import {useCurrentFrame} from 'remotion';
 import {Easing} from 'remotion';
 import {interpolate} from 'remotion';
-import {Arrow} from './Arrow';
+import {Circle} from './Circle';
 
 export const Operator = ({format, from, textColor}) => {
 	const frame = useCurrentFrame();
@@ -33,22 +33,21 @@ export const Operator = ({format, from, textColor}) => {
 		easing: Easing.bezier(0.15, 0.67, 0.54, 0.7),
 	});
 	if (format.operation === 'verb') {
-		const reverse =
-			format.content.length < 2 || format.content[1]?.operation === 'void';
 		return (
-			<div style={{opacity}} className="text-4xl font-bold relative w-fit">
-				<div
-					className={`absolute min-w-[300px] w-[200%] top-full -translate-y-[43%] left-1/2 -translate-x-[${
-						reverse ? '60' : '30'
-					}%] -z-10 ${reverse && '-scale-x-100'}`}
-				>
-					<Arrow
+			<div style={{opacity}} className="text-4xl text-center font-bold relative w-fit">
+				<div className="absolute w-[250%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10">
+					<Circle
 						fill={textColor}
 						offset={textStrokeInterpolate}
 						id={format.verb.replace(/\s/g, '')}
 					/>
 				</div>
-				<span style={{opacity: textInterpolate, color: textColor}}>
+				<div className="absolute w-fit z-10">
+					<span style={{opacity: textInterpolate, color: textColor}}>
+						{format.verb}
+					</span>
+				</div>
+				<span className='opacity-0'>
 					{format.verb}
 				</span>
 			</div>
