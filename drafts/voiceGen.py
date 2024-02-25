@@ -66,7 +66,9 @@ def getSpeech(key):
 
 def main(key=os.environ.get("key")):
     speech=getSpeech(key)
+    print("Generating voice")
     getAudio(speech,key)
+    print("Generating caption")
     getCaption(speech,key)
 
 

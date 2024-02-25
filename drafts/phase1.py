@@ -68,7 +68,6 @@ def lambda_handler(event, context):
     key=y["key"]
     output=main(query,key)
     
-    
     return {
         'statusCode': 200,
         'body': json.dumps(output)

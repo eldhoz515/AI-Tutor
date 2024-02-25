@@ -2,7 +2,7 @@
 # coding: utf-8
 
 from moviepy.editor import *
-import os
+import os, subprocess
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,4 +23,5 @@ def main(fileName, key=os.environ.get("key")):
     final = concatenate_videoclips(clips)
 
     final.write_videofile(f"{path}/{fileName}.mp4")
+    subprocess.Popen(f'explorer \"{os.path.abspath(f"{path}/{fileName}.mp4")}\"')
 

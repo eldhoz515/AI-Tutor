@@ -62,7 +62,8 @@ def get_expressions(sentences):
         t=threading.Thread(target=convert_sentence,args=(i,sentence,))
         threads.append(t)
         t.start()
-    for t in threads:
+    for i,t in enumerate(threads):
+        print(f"Converting sentence {i+1}/{len(threads)}")
         t.join()
     output=[]
     for i in range(len(sentences)):
