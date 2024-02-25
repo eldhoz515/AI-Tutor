@@ -6,6 +6,7 @@
   import Pause from "./Icons/Pause.svelte";
   import EnterFullscreen from "./Icons/EnterFullscreen.svelte";
   import ExitFullscreen from "./Icons/ExitFullscreen.svelte";
+  import Home from "./Icons/Home.svelte";
   import {
     currentPositionCheckInterval,
     interFaceTimeoutDuration,
@@ -22,7 +23,7 @@
     players = [],
     currentPosition = 0,
     seeking = false,
-    showInterface = true,
+    showInterface = false,
     paused = true,
     fullscreen = false,
     index = 0;
@@ -52,7 +53,6 @@
   };
 
   const handleShowInterface = () => {
-    return;
     showInterface = true;
     if (interfaceTimeout) clearTimeout(interfaceTimeout);
     interfaceTimeout = setTimeout(() => {
@@ -151,20 +151,31 @@
 >
   <div
     bind:this={playerInterface}
-    class="absolute flex flex-col justify-between z-[101] w-full h-full bg-red-500 bg-opacity-20
+    class="absolute flex flex-col justify-between z-[101] w-full h-full bg-black bg-opacity-50
     {showInterface ? 'visible' : 'hidden'}"
   >
-    <div class="text-center text-3xl mt-10">
-      {statusData?.query.slice(0, 30)}
+    <div class="mt-10 flex items-center justify-between px-10">
+      <button
+        class="block w-6 h-6"
+        on:click={() => {
+          navigate("/");
+        }}
+      >
+        <Home />
+      </button>
+      <div class="w-fit text-3xl">
+        {statusData?.query.slice(0, 30)}
+      </div>
+      <div />
     </div>
     {#if players[index]}
       <div class="flex justify-center">
         {#if paused}
-          <button class="w-44 h-44 block" on:click={togglePlayer}>
+          <button class="w-32 h-32 block" on:click={togglePlayer}>
             <Play />
           </button>
         {:else}
-          <button class="w-24 h-24 block" on:click={togglePlayer}>
+          <button class="w-16 h-16 block" on:click={togglePlayer}>
             <Pause />
           </button>
         {/if}
@@ -177,7 +188,7 @@
         {#if duration}
           <input
             bind:value={currentPosition}
-            class="w-full h-full"
+            class="w-full h-full accent-black"
             type="range"
             min="0"
             max={duration}
@@ -185,7 +196,7 @@
           />
         {/if}
       </div>
-      <button class="w-10 h-full block" on:click={toggleFullscreen}>
+      <button class="w-6 h-full block" on:click={toggleFullscreen}>
         {#if fullscreen}
           <ExitFullscreen />
         {:else}
