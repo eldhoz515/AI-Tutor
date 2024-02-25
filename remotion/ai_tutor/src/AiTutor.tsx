@@ -3,7 +3,7 @@ import {Audio, interpolate, staticFile} from 'remotion';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {staging, voiceLocationPrefix} from './constants';
 import {getDurationInFrames} from './utils';
-import {Subtitle} from './Subtitle';
+import Subtitle from './Subtitle';
 import {Fg} from './Fg';
 import {Bg} from './Bg';
 

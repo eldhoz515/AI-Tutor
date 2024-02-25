@@ -5,7 +5,7 @@ import {getDurationInFrames} from './utils';
 import './style.css';
 
 export const RemotionRoot: React.FC = () => {
-	// const props = getInputProps();
+	const props = getInputProps();
 
 	const durationInFrames = getDurationInFrames(props.speechMarks.duration);
 	return (
@@ -13,8 +13,8 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="AiTutor"
 				component={AiTutor}
-				width={1920}
-				height={1080}
+				width={1280}
+				height={720}
 				durationInFrames={durationInFrames}
 				fps={FPS}
 				defaultProps={props}
