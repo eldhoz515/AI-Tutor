@@ -20,7 +20,7 @@ export const Operator = ({format, from, textColor}) => {
 	const textInterpolate = interpolate(
 		frame,
 		[from + fps - 3, from + fps],
-		[0, 0.3],
+		[0, 1],
 		{
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',

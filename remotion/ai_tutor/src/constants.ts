@@ -13,51 +13,63 @@ export const imageAnimations = {
 	ry: [45, 0],
 	rz: [45, 0],
 };
-export const props = {
+export const props ={
 	"speechMarks": {
 	  "speechMarks": [
-		{ "time": 25, "value": "This" },
-		{ "time": 262, "value": "is" },
-		{ "time": 362, "value": "similar" },
-		{ "time": 775, "value": "to" },
-		{ "time": 900, "value": "the" },
-		{ "time": 987, "value": "client" },
-		{ "time": 1375, "value": "sending" },
-		{ "time": 1687, "value": "a" },
-		{ "time": 1737, "value": "request" },
-		{ "time": 2200, "value": "to" },
-		{ "time": 2275, "value": "the" },
-		{ "time": 2450, "value": "API" },
-		{ "time": 2962, "value": "for" },
-		{ "time": 3162, "value": "a" },
-		{ "time": 3200, "value": "specific" },
-		{ "time": 3737, "value": "operation" },
-		{ "time": 4300, "value": "or" },
-		{ "time": 4400, "value": "piece" },
-		{ "time": 4687, "value": "of" },
-		{ "time": 4775, "value": "data" }
+		{ "time": 25, "value": "The" },
+		{ "time": 125, "value": "circuit" },
+		{ "time": 513, "value": "includes" },
+		{ "time": 863, "value": "a" },
+		{ "time": 913, "value": "power" },
+		{ "time": 1238, "value": "source" },
+		{ "time": 1925, "value": "like" },
+		{ "time": 2113, "value": "a" },
+		{ "time": 2163, "value": "battery" },
+		{ "time": 2913, "value": "that" },
+		{ "time": 3050, "value": "provides" },
+		{ "time": 3438, "value": "the" },
+		{ "time": 3525, "value": "voltage" },
+		{ "time": 4288, "value": "conductors" },
+		{ "time": 4875, "value": "for" },
+		{ "time": 4988, "value": "the" },
+		{ "time": 5063, "value": "charges" },
+		{ "time": 5538, "value": "to" },
+		{ "time": 5638, "value": "flow" },
+		{ "time": 5888, "value": "through" },
+		{ "time": 6575, "value": "and" },
+		{ "time": 6688, "value": "devices" },
+		{ "time": 7500, "value": "like" },
+		{ "time": 7700, "value": "light" },
+		{ "time": 7950, "value": "bulbs" },
+		{ "time": 8300, "value": "or" },
+		{ "time": 8400, "value": "appliances" },
+		{ "time": 9325, "value": "that" },
+		{ "time": 9488, "value": "use" },
+		{ "time": 9675, "value": "the" },
+		{ "time": 9788, "value": "electrical" },
+		{ "time": 10275, "value": "energy" }
 	  ],
-	  "duration": 5.63,
-	  "start": 31.33
+	  "duration": 11.168,
+	  "start": 59.082
 	},
-	"audioKey": "61dc6fc2-eff5-4207-90ac-c37f5bcef11e",
+	"audioKey": "82ea7611-737c-4b9b-adb6-9de15c79277d",
 	"format": {
 	  "operation": "verb",
 	  "content": [
 		{
 		  "operation": "asset",
-		  "expression": "Client",
-		  "assetUrl": "https://player.vimeo.com/external/419853557.hd.mp4?s=33a44bff30a000aca40eca5880039b3e8684e99f&profile_id=170&oauth2_token_id=57447761",
-		  "googleImage": "https://www.hubspot.com/hubfs/clientvscustomer_2.webp"
+		  "expression": "Power source",
+		  "assetUrl": "https://player.vimeo.com/external/411056921.hd.mp4?s=31e1446b6838bb35e5eaa2c78c76697478397dca&profile_id=170&oauth2_token_id=57447761",
+		  "googleImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Netzgeraet.jpg/1200px-Netzgeraet.jpg"
 		},
 		{
 		  "operation": "asset",
-		  "expression": "request",
-		  "assetUrl": "https://player.vimeo.com/external/553215351.hd.mp4?s=85b6221fa91d3dfdd87d28b025dd61006d6fc4c0&profile_id=175&oauth2_token_id=57447761",
-		  "googleImage": "https://media.istockphoto.com/id/1415598585/vector/thin-outline-icon-sheet-of-paper-or-document-in-a-persons-hand-such-line-sign-as-request.jpg?s=612x612&w=0&k=20&c=OEg3W67Td0rqYuNBk_a0lTRWqFbCx2OG7xdaGw7VykE="
+		  "expression": "voltage",
+		  "assetUrl": "https://player.vimeo.com/external/509248183.sd.mp4?s=e7868c6463050fdf2f34feea60d747065c736a32&profile_id=164&oauth2_token_id=57447761",
+		  "googleImage": "https://dam-assets.fluke.com/s3fs-public/6004179-dmm-whatis-voltage-1500x1000.jpg"
 		}
 	  ],
-	  "verb": "sends"
+	  "verb": "provides"
 	},
-	"renderId": "lkk01rh149"
+	"renderId": "onhadxaq00"
   };
