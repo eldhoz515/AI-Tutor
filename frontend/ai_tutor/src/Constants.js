@@ -10,3 +10,5 @@ export const loadingStatuses = [
   "processing",
   "rendering",
 ];
+export const interFaceTimeoutDuration = 1 * 1000;
+export const currentPositionCheckInterval = 1 * 1000;
