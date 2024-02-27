@@ -36,7 +36,8 @@ splitSymbols = ["=", "+", "&", "->"]
 
 
 renderIds=dict()
-threads=[]
+videos=dict()
+images=dict()
 sampleProps=[]
 
 
@@ -67,7 +68,7 @@ def cleanExpression(expression):
     return expression.replace('.','').replace('(','').replace(')','').strip()
 
 
-def processExpression(i,expression):
+def processExpression(i, expression,fakeProcess=False):
     try:
         format = {}
 
@@ -77,7 +78,7 @@ def processExpression(i,expression):
                 format["content"] = []
                 for part in expression.split(symbol):
                     if len(part):
-                        format["content"].append(processExpression(i,part))
+                        format["content"].append(processExpression(i, part, fakeProcess))
                 return format
 
         if "\u201c" in expression:
@@ -88,9 +89,9 @@ def processExpression(i,expression):
             format["verb"] = cleanExpression(re.findall(pattern, expression)[0])
             for part in withoutVerb.split("$$"):
                 if len(part):
-                    format["content"].append(processExpression(i,part))
+                    format["content"].append(processExpression(i, part, fakeProcess))
             return format
-        if "\'" in expression:
+        if "'" in expression:
             format["operation"] = "verb"
             format["content"] = []
             pattern = r"\'(.*?)\'"
@@ -98,18 +99,21 @@ def processExpression(i,expression):
             format["verb"] = cleanExpression(re.findall(pattern, expression)[0])
             for part in withoutVerb.split("$$"):
                 if len(part):
-                    format["content"].append(processExpression(i,part))
+                    format["content"].append(processExpression(i, part, fakeProcess))
             return format
-
 
         query = cleanExpression(expression)
         if not len(query):
-            format["operation"]="void"
+            format["operation"] = "void"
             return format
         format["operation"] = "asset"
         format["expression"] = query
-        format["assetUrl"] = getAssetUrl(query)
-        format["googleImage"]=getGoogleImage(query)
+        if fakeProcess:
+            videos[query]="NaN"
+            images[query]="NaN"
+        else:
+            format["assetUrl"] = videos[query]
+            format["googleImage"] = images[query]
         return format
     except Exception as e:
         print(e)
@@ -131,12 +135,13 @@ def render(i, props, retry=0):
         return render(i, props, retry + 1)
 
 
-def worker(i, expression, speechMarks, key):
-    print(f"starting worker {i} : {expression}")
+def worker(i, expression, speechMarks, key, fakeProcess=False):
     props = dict()
     props["speechMarks"] = speechMarks
     props["audioKey"] = key
-    props["format"] = processExpression(i, cleanExpression(expression))
+    props["format"] = processExpression(i, cleanExpression(expression), fakeProcess)
+    if fakeProcess:
+        return
     sampleProps.append(dict(expression=expression, props=props))
     renderIds[f"{i}"] = render(i, props)
     props["renderId"] = renderIds[f"{i}"]
@@ -184,23 +189,46 @@ def getSentenceSpeechMarks(speechMarks):
     return speechMarksBySentence
 
 
-def master(expressions, key):
-    speechMarks = getSpeechMarks(key)
-    speechMarksBySentence=getSentenceSpeechMarks(speechMarks)
-    for i, expression in enumerate(expressions):
+def getAsset(query):
+    videos[query] = getAssetUrl(query)
+    images[query] = getGoogleImage(query)
+
+
+def fetchAssets():
+    threads = []
+    for query in list(videos.keys()):
         t = threading.Thread(
-            target=worker,
-            args=(
-                i,
-                expression,
-                speechMarksBySentence[i],
-                key,
-            ),
+            target=getAsset,
+            args=(query,),
         )
         threads.append(t)
         t.start()
-    for t in threads:
+    for i, t in enumerate(threads):
+        print(f"Fetching asset {i+1}/{len(threads)}")
         t.join()
+
+
+def processor(expressions, speechMarksBySentence, key, fakeProcess=False):
+    print(f"#### {'Fake' if fakeProcess else 'Real'} processing ####")
+    threads = []
+    for i, expression in enumerate(expressions):
+        t = threading.Thread(
+            target=worker,
+            args=(i, expression, speechMarksBySentence[i], key, fakeProcess),
+        )
+        threads.append(t)
+        t.start()
+    for i, t in enumerate(threads):
+        print(f"Finishing worker {i+1}/{len(threads)}")
+        t.join()
+
+
+def master(expressions, key):
+    speechMarks = getSpeechMarks(key)
+    speechMarksBySentence=getSentenceSpeechMarks(speechMarks)
+    processor(expressions,speechMarksBySentence,key,fakeProcess=True)
+    fetchAssets()
+    processor(expressions,speechMarksBySentence,key)
     output = []
     for i in range(len(expressions)):
         output.append(renderIds[f"{i}"])

@@ -4,6 +4,7 @@
 import boto3
 import os
 import json
+import threading
 
 if not os.environ.get("prod"):
     from dotenv import load_dotenv
@@ -65,11 +66,17 @@ def getSpeech(key):
 
 
 def main(key=os.environ.get("key")):
-    speech=getSpeech(key)
+    speech = getSpeech(key)
+    threads = []
+    t1 = threading.Thread(target=getAudio, args=(speech, key))
+    t1.start()
     print("Generating voice")
-    getAudio(speech,key)
+    t2 = threading.Thread(target=getCaption, args=(speech, key))
+    t2.start()
     print("Generating caption")
-    getCaption(speech,key)
+    threads.extend([t1, t2])
+    for t in threads:
+        t.join()
 
 
 def lambda_handler(event, context):

@@ -2,7 +2,7 @@
 # coding: utf-8
 
 import phase1,phase2,voiceGen,processor,downloadVideo,merger
-import os,uuid,json
+import os,uuid,json,threading
 
 
 def main(query, key=os.environ.get("key")):
@@ -19,5 +19,5 @@ def main(query, key=os.environ.get("key")):
     merger.main(fileName=query, key=key)
 
 
-main("how electricity works",str(uuid.uuid4()))
+main("how api works",str(uuid.uuid4()))
 

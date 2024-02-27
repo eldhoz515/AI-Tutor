@@ -5,6 +5,6 @@
 </script>
 
 <h1 class="text-7xl text-center mt-60 mb-40 font-medium">
-  Lerning shuldn't b boring!
+  Lerning is <span class="line-through">boring</span>!
 </h1>
 <Search on:error />
