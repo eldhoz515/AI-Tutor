@@ -30,35 +30,30 @@ def getFromS3(path):
     return response["Body"]
 
 
-query=None
-renderIds=None
+def saveStatus(status, key, query):
+    print(status)
+    saveToS3(
+        json.dumps(dict(status=status, query=query, renderIds=None)),
+        f"status/{key}.json",
+    )
 
 
-def invokeLambda(functionName,data):
+def invokeSlave(data):
     response = lambdaClient.invoke(
-        FunctionName=functionName,
-        InvocationType="RequestResponse",
+        FunctionName="ai_tutor_slave",
+        InvocationType="Event",
         LogType="None",
         Payload=data,
     )
 
 
-def saveStatus(status,key):
-    print(status)
-    saveToS3(json.dumps(dict(status=status,query=query,renderIds=renderIds)),f"status/{key}.json")
-
-
 def main(query, key=os.environ.get("key")):
     print(key)
-    saveStatus("init", key)
-    invokeLambda("ai_tutor_phase1", json.dumps(dict(query=query, key=key)))
-    saveStatus("phase1", key)
-    invokeLambda("ai_tutor_voiceGen", json.dumps(dict(key=key)))
-    saveStatus("voiceGen", key)
-    invokeLambda("ai_tutor_phase2", json.dumps(dict(key=key)))
-    saveStatus("phase2",key)
-    invokeLambda("ai_tutor_processor", json.dumps(dict(key=key)))
-    saveStatus("processed",key)
+    try:
+        saveStatus("init", key, query)
+        invokeSlave(json.dumps(dict(query=query, key=key)))
+    except:
+        saveStatus("error", key, query)
 
 
 def lambda_handler(event, context):
