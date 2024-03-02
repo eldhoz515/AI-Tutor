@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body,html {
+body,
+html {
   background-color: black;
   font-family: "Poppins", "serif";
   color: white;
@@ -18,4 +19,14 @@ body,html {
   width: 100vw;
   overflow: auto;
   position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0051ff;
+  border-radius: 999px;
 }

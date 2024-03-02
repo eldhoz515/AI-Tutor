@@ -2,6 +2,8 @@
   import { createEventDispatcher } from "svelte";
   import Search from "./Search.svelte";
   import Wave from "./Icons/Wave.svelte";
+  import History from "./Icons/History.svelte";
+  import { navigate } from "svelte-routing";
   const dispatch = createEventDispatcher();
 </script>
 
@@ -10,7 +12,17 @@
     <Wave />
   </div>
 </div>
+
 <img class="absolute z-20 w-96 bottom-0" src="tutor.png" alt="" />
+<button
+  class="absolute z-20 w-10 h-10 right-0 bottom-0 mr-5 mb-5"
+  on:click={() => {
+    navigate("/history");
+  }}
+>
+  <History />
+</button>
+
 <h1 class="text-8xl text-center mt-[17rem] mb-24 font-bold">
   Lerning is <span
     class="line-through decoration-[10px] text-secondary-600 decoration-secondary-500"

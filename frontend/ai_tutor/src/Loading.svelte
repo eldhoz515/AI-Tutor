@@ -14,7 +14,7 @@
   import { saveToLocal } from "./utils";
   import { Shadow } from "svelte-loading-spinners";
   import Home from "./Icons/Home.svelte";
-  import Blob from "./Icons/Blob.svelte";
+  import Blob from "./Icons/BlobScatter.svelte";
 
   export let key = "";
   const dispatch = createEventDispatcher();

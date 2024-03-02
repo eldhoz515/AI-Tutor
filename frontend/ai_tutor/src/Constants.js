@@ -1,4 +1,4 @@
-const staging = true;
+const staging = false;
 
 export const searchUrl = staging
   ? ""
