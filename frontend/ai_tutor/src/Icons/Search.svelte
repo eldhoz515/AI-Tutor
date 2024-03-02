@@ -1,4 +1,4 @@
-<svg fill="#fff" height="50px" viewBox="0 0 488.4 488.4">
+<svg fill="#fff" height="50px" stroke="#fff" stroke-width="5px" viewBox="0 0 488.4 488.4">
   <g>
     <g>
       <path

@@ -1,5 +1,5 @@
 <script>
-  import { createEventDispatcher, onMount } from "svelte";
+  import { createEventDispatcher, onDestroy, onMount } from "svelte";
   import { navigate } from "svelte-routing";
   import { getFromLocal } from "./utils";
   import Play from "./Icons/Play.svelte";
@@ -21,6 +21,8 @@
     duration,
     interfaceTimeout,
     players = [],
+    currentPositionChecker,
+    isPausedChecker,
     currentPosition = 0,
     seeking = false,
     showInterface = false,
@@ -28,6 +30,17 @@
     fullscreen = false,
     index = 0;
   const dispatch = createEventDispatcher();
+
+  $: {
+    if (renderIds?.length) calculateDuration();
+  }
+
+  $: {
+    if (players.length) {
+      syncPlayers();
+      calculateDuration();
+    }
+  }
 
   const isFullscreen = () => {
     fullscreen = document.fullscreenElement !== null;
@@ -101,10 +114,13 @@
     seeking = false;
   };
 
-  const reloadPlayer = (i) => {
-    setTimeout(() => {
-      players[i].src = `${videoUrlPrefix}${renderIds[i]}${videoUrlSuffix}`;
-    }, 1000);
+  const syncPlayers = () => {
+    players = [...players.slice(0, renderIds.length)];
+  };
+
+  const removeSegment = (renderId) => {
+    console.error(`Failed to load segment ${renderId}`);
+    renderIds = [...statusData.renderIds.filter((value) => value != renderId)];
   };
 
   const switchSegment = (nextIndex) => {
@@ -126,87 +142,93 @@
     const data = getFromLocal(key);
     if (!data?.renderIds) {
       navigate(`/loading/${key}`);
+      return;
     }
     statusData = data;
     renderIds = data.renderIds;
 
-    setInterval(() => {
+    currentPositionChecker = setInterval(() => {
       changeCurrentPosition();
     }, currentPositionCheckInterval);
-    setInterval(() => {
+    isPausedChecker = setInterval(() => {
       paused = isPaused();
     }, 100);
     document.addEventListener("fullscreenchange", isFullscreen);
     isFullscreen();
   });
+
+  onDestroy(() => {
+    if (currentPositionChecker) clearInterval(currentPositionChecker);
+    if (isPausedChecker) clearInterval(isPausedChecker);
+  });
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div
-  class="relative w-full h-[100vh]"
-  on:mousemove={handleShowInterface}
-  on:mousedown={handleShowInterface}
-  on:drag={handleShowInterface}
-  on:dragenter={handleShowInterface}
->
+{#if renderIds}
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    bind:this={playerInterface}
-    class="absolute flex flex-col justify-between z-[101] w-full h-full bg-black bg-opacity-50
-    {showInterface ? 'visible' : 'hidden'}"
+    class="relative w-full h-[100vh]"
+    on:mousemove={handleShowInterface}
+    on:mousedown={handleShowInterface}
+    on:drag={handleShowInterface}
+    on:dragenter={handleShowInterface}
   >
-    <div class="mt-10 flex items-center justify-between px-10">
-      <button
-        class="block w-6 h-6"
-        on:click={() => {
-          navigate("/");
-        }}
-      >
-        <Home />
-      </button>
-      <div class="w-fit text-3xl">
-        {statusData?.query.slice(0, 30)}
-      </div>
-      <div />
-    </div>
-    {#if players[index]}
-      <div class="flex justify-center">
-        {#if paused}
-          <button class="w-32 h-32 block" on:click={togglePlayer}>
-            <Play />
-          </button>
-        {:else}
-          <button class="w-16 h-16 block" on:click={togglePlayer}>
-            <Pause />
-          </button>
-        {/if}
-      </div>
-    {/if}
     <div
-      class="flex justify-between gap-20 px-10 mb-10 w-full h-10 items-center"
+      bind:this={playerInterface}
+      class="absolute flex flex-col justify-between z-[101] w-full h-full bg-black bg-opacity-50
+    {showInterface ? 'visible' : 'hidden'}"
     >
-      <div class="w-full h-full">
-        {#if duration}
-          <input
-            bind:value={currentPosition}
-            class="w-full h-full accent-black"
-            type="range"
-            min="0"
-            max={duration}
-            on:change={seekTo}
-          />
-        {/if}
+      <div class="mt-10 flex items-center justify-between px-10">
+        <button
+          class="block w-6 h-6"
+          on:click={() => {
+            navigate("/");
+          }}
+        >
+          <Home />
+        </button>
+        <div class="w-fit text-3xl font-medium">
+          {statusData?.query?.slice(0, 30)}
+        </div>
+        <div />
       </div>
-      <button class="w-6 h-full block" on:click={toggleFullscreen}>
-        {#if fullscreen}
-          <ExitFullscreen />
-        {:else}
-          <EnterFullscreen />
-        {/if}
-      </button>
+      {#if players[index]}
+        <div class="flex justify-center">
+          {#if paused}
+            <button class="w-32 h-32 block" on:click={togglePlayer}>
+              <Play />
+            </button>
+          {:else}
+            <button class="w-16 h-16 block" on:click={togglePlayer}>
+              <Pause />
+            </button>
+          {/if}
+        </div>
+      {/if}
+      <div
+        class="flex justify-between gap-20 px-10 mb-10 w-full h-10 items-center"
+      >
+        <div class="w-full h-full">
+          {#if duration}
+            <input
+              bind:value={currentPosition}
+              class="w-full h-full accent-secondary-500 cursor-pointer"
+              type="range"
+              min="0"
+              max={duration}
+              on:change={seekTo}
+            />
+          {/if}
+        </div>
+        <button class="w-6 h-full block" on:click={toggleFullscreen}>
+          {#if fullscreen}
+            <ExitFullscreen />
+          {:else}
+            <EnterFullscreen />
+          {/if}
+        </button>
+      </div>
     </div>
-  </div>
-  {#if renderIds}
-    {#each renderIds as renderId, i}
+    {#each renderIds as renderId, i (renderId)}
       <!-- svelte-ignore a11y-media-has-caption -->
       <video
         src="{videoUrlPrefix}{renderId}{videoUrlSuffix}"
@@ -215,12 +237,12 @@
         bind:this={players[i]}
         on:durationchange={calculateDuration}
         on:error={() => {
-          reloadPlayer(i);
+          removeSegment(renderId);
         }}
         on:ended={() => {
           switchSegment(i + 1);
         }}
       ></video>
     {/each}
-  {/if}
-</div>
+  </div>
+{/if}

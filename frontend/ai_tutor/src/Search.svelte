@@ -42,7 +42,7 @@
 </script>
 
 <button
-  class="rounded-full mx-auto bg-gray-950 w-1/2 flex items-center px-10"
+  class="rounded-full ml-auto mr-40 bg-gradient-to-b from-secondary-600 to-secondary-700 w-1/2 flex items-center px-10"
   on:click={() => {
     searchBar?.focus();
   }}
@@ -51,8 +51,8 @@
   <input
     {disabled}
     type="text"
-    class="pl-10 w-full block h-20 outline-none rounded-full text-3xl bg-transparent placeholder-white"
-    placeholder="Esk me anyting..."
+    class="pl-10 w-full block h-20 outline-none rounded-full text-3xl text-white bg-transparent placeholder-white"
+    placeholder="Ask me anything..."
     bind:value={query}
     bind:this={searchBar}
     on:keydown={(e) => {
