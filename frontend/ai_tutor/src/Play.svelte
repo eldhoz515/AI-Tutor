@@ -39,8 +39,13 @@
     if (players.length) {
       syncPlayers();
       calculateDuration();
+      startPlaying();
     }
   }
+
+  const startPlaying = () => {
+    players[index]?.play();
+  };
 
   const isFullscreen = () => {
     fullscreen = document.fullscreenElement !== null;

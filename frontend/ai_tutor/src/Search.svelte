@@ -4,6 +4,7 @@
   import { navigate } from "svelte-routing";
   import { createEventDispatcher } from "svelte";
   import { saveToLocal } from "./utils";
+  import { Shadow } from "svelte-loading-spinners";
 
   let query = "",
     disabled = false,
@@ -47,7 +48,13 @@
     searchBar?.focus();
   }}
 >
-  <Search />
+  {#if disabled}
+  <div class="w-fit h-fit">
+    <Shadow color="#fff" size="30" unit="px" />
+  </div>
+  {:else}
+    <Search />
+  {/if}
   <input
     {disabled}
     type="text"
