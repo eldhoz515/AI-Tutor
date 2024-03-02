@@ -1,7 +1,7 @@
 # GPT but for Video
 
 - Type in you query and get answers with videos
-- Powered by GPT, AWS POLLY and Remotion
+- Powered by GPT, Google, Pexels and AWS POLLY
 
 ## How to run
 ```
