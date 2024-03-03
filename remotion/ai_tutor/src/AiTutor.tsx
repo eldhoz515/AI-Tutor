@@ -1,7 +1,7 @@
 import {Easing} from 'remotion';
 import {Audio, interpolate, staticFile} from 'remotion';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {staging, voiceLocationPrefix} from './constants';
+import {bgmDuration, staging, voiceLocationPrefix} from './constants';
 import {getDurationInFrames} from './utils';
 import Subtitle from './Subtitle';
 import {Fg} from './Fg';
@@ -39,10 +39,12 @@ export const AiTutor = (props) => {
 						: `${voiceLocationPrefix}/${props.audioKey}.mp3`
 				}
 				startFrom={getDurationInFrames(props.speechMarks.start)}
-				endAt={getDurationInFrames(
-					props.speechMarks.start + props.speechMarks.duration
-				)}
 				// volume={0.1}
+			/>
+			<Audio
+				src={staticFile('bgm.mp3')}
+				volume={0.01}
+				startFrom={getDurationInFrames(props.speechMarks.start % bgmDuration)}
 			/>
 			<Bg format={props.format} />
 			<AbsoluteFill style={{transform: `scale(${scale})`, opacity}}>

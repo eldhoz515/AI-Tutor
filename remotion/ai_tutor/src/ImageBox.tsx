@@ -116,6 +116,7 @@ export const ImageBox = ({
 							height: dimensions.height,
 						}}
 						onLoad={handleImageLoad}
+						onError={() => {}}
 					/>
 					<div
 						className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl -z-2"

@@ -51,6 +51,7 @@ export const Bg = ({format}) => {
 									muted
 									className="w-full h-full object-cover"
 									src={staging ? staticFile('bg.mp4') : bgUrl}
+									onError={() => {}}
 								/>
 							</div>
 						</Series.Sequence>
