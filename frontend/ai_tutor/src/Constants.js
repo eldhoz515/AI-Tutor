@@ -7,7 +7,8 @@ export const searchUrl = staging
 export const statusUrlPrefix = staging
   ? ""
   : "https://ai-tutor-s3.s3.ap-south-1.amazonaws.com/status";
-export const videoUrlPrefix = "https://ik.imagekit.io/tpwelddas/";
+export const videoUrlPrefix =
+  "https://remotionlambda-apsouth1-nxlumuozex.s3.ap-south-1.amazonaws.com/renders/";
 export const videoUrlSuffix = "/out.mp4";
 export const jokesUrlPrefix = "";
 
