@@ -37,7 +37,7 @@ export const Bg = ({format}) => {
 					const opacity = interpolate(
 						frame,
 						[subDuration * i, subDuration * (i + 0.5), subDuration * (i + 1)],
-						[0.05, 0.2, 0.05],
+						[0.1, 0.5, 0.1],
 						{
 							extrapolateLeft: 'clamp',
 							extrapolateRight: 'clamp',
