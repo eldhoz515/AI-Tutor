@@ -24,7 +24,10 @@
 </button>
 
 <h1 class="text-8xl text-center mt-[17rem] mb-24 font-bold">
-  Lerning is <span
+  <span class="caret text-6xl text-secondary-500">^</span>
+  <span class="supA text-secondary-500">a</span>
+  Lerning is
+  <span
     class="line-through decoration-[10px] text-secondary-600 decoration-secondary-500"
     >boring!</span
   >
@@ -46,5 +49,16 @@
     50% {
       transform: scaleY(1.2);
     }
+  }
+
+  .caret {
+    position: absolute;
+    transform: translate(66px, 100px);
+    rotate: 348deg;
+  }
+  .supA {
+    position: absolute;
+    transform: translate(83px, -61px);
+    rotate: 348deg;
   }
 </style>
