@@ -4,7 +4,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import json, time, requests, os
+import boto3
 
+s3Client = boto3.client("s3")
+
+def saveToS3(body, path):
+    response = s3Client.put_object(
+        Body=body,
+        Bucket="ai-tutor-s3",
+        Key=path,
+    )
 
 def checkImg(url):
     try:
@@ -32,11 +41,10 @@ def extractImg(driver, imgNo):
             x.click()
         except Exception as e:
             print(e)
-            driver.find_elements(By.TAG_NAME, "button")[0].click()
-            x = driver.find_element(
-                By.XPATH, f'//*[@id="islrg"]/div[1]/div[{imgNo}]/a[1]'
-            )
-            x.click()
+            saveToS3(driver.page_source, 'image_errors/error.html')
+            driver.save_screenshot('/tmp/error.png')
+            saveToS3(open('/tmp/error.png', 'rb'), 'image_errors/error.png')
+            print("saved error png")
         wait = WebDriverWait(driver, int(os.environ.get("waitTimeout")))
         wait.until(
             EC.element_to_be_clickable(
