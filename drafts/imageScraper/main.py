@@ -8,12 +8,14 @@ import boto3
 
 s3Client = boto3.client("s3")
 
+
 def saveToS3(body, path):
     response = s3Client.put_object(
         Body=body,
         Bucket="ai-tutor-s3",
         Key=path,
     )
+
 
 def checkImg(url):
     try:
@@ -41,10 +43,10 @@ def extractImg(driver, imgNo):
             x.click()
         except Exception as e:
             print(e)
-            saveToS3(driver.page_source, 'image_errors/error.html')
-            driver.save_screenshot('/tmp/error.png')
-            saveToS3(open('/tmp/error.png', 'rb'), 'image_errors/error.png')
-            print("saved error png")
+            saveToS3(driver.page_source, "image_errors/error.html")
+            return driver.find_element(
+                By.XPATH, '//g-img[@class="mNsIhb"]/img'
+            ).get_attribute("src")
         wait = WebDriverWait(driver, int(os.environ.get("waitTimeout")))
         wait.until(
             EC.element_to_be_clickable(
