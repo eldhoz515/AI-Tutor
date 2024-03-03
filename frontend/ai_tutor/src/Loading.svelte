@@ -70,7 +70,6 @@
       const res = await fetch(`${statusUrlPrefix}/${key}.json`);
       if (res.status != 200) throw res.statusText;
       const data = await res.json();
-      console.log(data);
       status = data.status;
       query = data.query || "";
       saveToLocal(key, data);
@@ -83,7 +82,6 @@
   };
 
   const processStatus = () => {
-    console.log(status);
     if (!status) return;
     else if (status == loadingStatuses.error) {
       throw `status is ${status}`;

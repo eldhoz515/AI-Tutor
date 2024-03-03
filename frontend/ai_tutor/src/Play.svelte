@@ -143,6 +143,28 @@
     else players[index].pause();
   };
 
+  const handleKeyDown = (event) => {
+    switch (event.code) {
+      case "Enter":
+      case "Space":
+        togglePlayer();
+        break;
+      case "KeyF":
+        toggleFullscreen();
+        break;
+      case "ArrowLeft":
+        currentPosition = Math.max(0, currentPosition - 5);
+        seekTo();
+        break;
+      case "ArrowRight":
+        currentPosition = Math.min(duration, currentPosition + 5);
+        seekTo();
+        break;
+      default:
+        return;
+    }
+  };
+
   onMount(() => {
     const data = getFromLocal(key);
     if (!data?.renderIds) {
@@ -159,12 +181,14 @@
       paused = isPaused();
     }, 100);
     document.addEventListener("fullscreenchange", isFullscreen);
+    document.addEventListener("keydown", handleKeyDown);
     isFullscreen();
   });
 
   onDestroy(() => {
     if (currentPositionChecker) clearInterval(currentPositionChecker);
     if (isPausedChecker) clearInterval(isPausedChecker);
+    document.removeEventListener("keydown", handleKeyDown);
   });
 </script>
 
