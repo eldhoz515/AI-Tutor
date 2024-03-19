@@ -125,7 +125,7 @@
 
   const removeSegment = (renderId) => {
     console.error(`Failed to load segment ${renderId}`);
-    renderIds = [...statusData.renderIds.filter((value) => value != renderId)];
+    renderIds = [...renderIds.filter((value) => value != renderId)];
   };
 
   const switchSegment = (nextIndex) => {
